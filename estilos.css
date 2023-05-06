@@ -89,7 +89,15 @@ textarea::placeholder{
      background-color: #D8DFE8;
      font-size: 16px;
      font-weight: 500;
-     color: #0A3871;
+     color: #3F3D56;
+     transition: all 0.2s ease-out;
+}
+
+.desencriptar:hover{
+     background-color: #6C63FF;
+     font-size: 16px;
+     color: white;
+     box-shadow: 5px 5px 8px rgb(56, 3, 113);
 }
 
 #contenedorIzquierdo{
@@ -145,7 +153,6 @@ textarea::placeholder{
 #contenedorIzquierdoBeta > h2{
      text-align: center;
      width: 80%;
-     margin-top: 30px;
      margin-left: auto;
      margin-right: auto;
      font-weight: bold;
@@ -165,9 +172,31 @@ textarea::placeholder{
 #imgContenedorIzquierdoBeta{
      display: block;
      width: 70%;
+     margin-top: 30px;
      margin-left: auto;
      margin-right: auto;
 }
+
+.copiar{
+     display: block;
+     background-color: #D8DFE8;
+     font-size: 16px;
+     font-weight: 500;
+     color: #3F3D56;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 30px;
+     transition: all 0.2s ease-out;
+}
+
+.copiar:hover{
+     background-color: #6C63FF;
+     font-size: 16px;
+     color: white;
+     box-shadow: 5px 5px 8px rgb(56, 3, 113);
+}
+
+#mensajeCopiado{}
 
 footer{
      background: #6C63FF;

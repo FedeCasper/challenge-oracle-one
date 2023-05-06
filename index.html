@@ -38,9 +38,11 @@
           </div>
 
           <div id="contenedorIzquierdoBeta">
-               <img id="imgContenedorIzquierdoBeta" src="./assets/happy.svg" alt="" srcset="">
                <h2>Tu texto encriptado es el siguiente</h2>
                <p id="textoEncriptado">Ingresa el texto que desees encriptar o desencriptar</p>
+               <img id="imgContenedorIzquierdoBeta" src="./assets/happy.svg" alt="" srcset="">
+               <button class="botones copiar">Copiar</button>
+               <p id="mensajeCopiado">Texto copiado!</p>
           </div>
 
 
@@ -62,6 +64,11 @@
           console.log(texto);
           var contenedorIzquierdoBeta = document.querySelector('#contenedorIzquierdoBeta')
           console.log(contenedorIzquierdoBeta);
+          var botonCopiar = document.querySelector('.copiar')
+          console.log(botonCopiar);
+          var mensajeCopiado = document.querySelector('#mensajeCopiado')
+          console.log(mensajeCopiado);
+          
 
           function saludar (e){
                if(e.target.value == "" || e.target.value == "off"){
@@ -93,11 +100,31 @@
                          console.log(paso4);
                     }
                }
-               contenedorIzquierdoBeta.style = "visibility: visible"
+               contenedorIzquierdoBeta.style = "visibility: visible";
+               mensajeCopiado.style = "visibility: hidden";
                texto.innerHTML = paso4
           }
 
+          function copiarTexto (e) {
+               let textoCapturado = document.querySelector('#textoEncriptado') 
+               console.log(textoCapturado.innerText); 
+               let textoCopiado = textoCapturado.innerText
+               navigator.clipboard.writeText(textoCopiado)
+               console.log(mensajeCopiado.hidden);
+               mensajeCopiado.style = "visibility: visible";
+               setTimeout(mostrarMensaje, 5000)
+          }
+          console.log([mensajeCopiado.hidden]);
+          function mostrarMensaje(){
+               if(mensajeCopiado.innerHTML === "Texto copiado!"){
+                    console.log("hola");
+                    mensajeCopiado.style = "visibility: hidden"
+               }
+          }
+
           botonEncriptar.onclick = saludar;
+          botonCopiar.onclick = copiarTexto;
+
      </script>
 </body>
 </html>
