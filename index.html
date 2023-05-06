@@ -36,6 +36,12 @@
                <p>Ingresa el texto que desees encriptar o desencriptar</p>
           </div>
 
+          <div id="contenedorIzquierdoBeta">
+               <img id="imgContenedorIzquierdoBeta" src="./assets/happy.svg" alt="" srcset="">
+               <h2>Tu texto encriptado es el siguiente</h2>
+               <p id="textoEncriptado">Ingresa el texto que desees encriptar o desencriptar</p>
+          </div>
+
 
 
      </main>
@@ -51,6 +57,10 @@
           console.log(contenedorIzquierdo);
           var textarea = document.querySelector('textarea')
           console.log(textarea.value);
+          var texto = document.querySelector('#textoEncriptado')
+          console.log(texto);
+          var contenedorIzquierdoBeta = document.querySelector('#contenedorIzquierdoBeta')
+          console.log(contenedorIzquierdoBeta);
 
           function saludar (e){
                if(e.target.value == "" || e.target.value == "off"){
@@ -72,25 +82,19 @@
           function recorrerString (string){
                for(let i = 0 ; i < string.length ; i++){
                     console.log(string[i]);
-                    let palabraModificada = ""
+
                     if(string[i] == "a"){
-                         palabraModificada = string.replaceAll('a',"ai")
-                         let paso1 = palabraModificada.replaceAll('e',"enter")
-                         let paso2 = palabraModificada.replaceAll('i',"imes")
-                         let paso3 = palabraModificada.replaceAll('o',"ober")
-                         let paso4 = palabraModificada.replaceAll('u',"ufat")
-                         console.log(`Encontré una a`);
-                         console.log(paso1);
+                         var paso0 = string.replaceAll('a',"ai")
+                         var paso1 = paso0.replaceAll('e',"enter")
+                         var paso2 = paso1.replaceAll('i',"imes")
+                         var paso3 = paso2.replaceAll('o',"ober")
+                         var paso4 = paso3.replaceAll('u',"ufat")
+                         console.log(paso4);
                     }
                }
+               contenedorIzquierdoBeta.style = "visibility: visible"
+               texto.innerHTML = paso4
           }
-
-
-          var a = "ai";
-          var e = "enter";
-          var i = "imes";
-          var o = "ober";
-          var u = "ufat";
 
           function encriptar (){
                
