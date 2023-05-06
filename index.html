@@ -3,7 +3,8 @@
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <!-- <link rel="stylesheet" href="reset.css"> -->
+     <link rel="shortcut icon" href="./assets/happy_bird.png" type="image/x-icon">
+     <link rel="stylesheet" href="reset.css">
      <link rel="stylesheet" href="estilos.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Encriptador</title>
@@ -16,7 +17,7 @@
                <img class="logoEncriptador" src="./assets/logo.svg" alt="logo encriptador">
           </h1>
 
-          <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+          <textarea name="" id="" cols="30" rows="15" placeholder="Ingrese el texto aquí"></textarea>
 
 
           <div class="contenedorBotones">
@@ -72,7 +73,7 @@
                contenedorIzquierdo.hidden = true
                // console.log(contenedorIzquierdo.hidden);
                console.log(textarea.value);
-               let textoIngresado = textarea.value;
+               let textoIngresado = textarea.value.toLowerCase();
                console.log(textoIngresado);
                console.log(textoIngresado[1]);
 
@@ -83,7 +84,7 @@
                for(let i = 0 ; i < string.length ; i++){
                     console.log(string[i]);
 
-                    if(string[i] == "a"){
+                    if(string[i] == "a" || string[i] == "e" || string[i] == "i" || string[i] == "o" || string[i] == "u"){
                          var paso0 = string.replaceAll('a',"ai")
                          var paso1 = paso0.replaceAll('e',"enter")
                          var paso2 = paso1.replaceAll('i',"imes")
@@ -94,10 +95,6 @@
                }
                contenedorIzquierdoBeta.style = "visibility: visible"
                texto.innerHTML = paso4
-          }
-
-          function encriptar (){
-               
           }
 
           botonEncriptar.onclick = saludar;
