@@ -44,6 +44,59 @@
           <p>Desarrollado por Federico Rouyere - Mendoza, Argentina.</p>
      </footer>
 
-     <script src="./main.js"></script>
+     <script>
+          var botonEncriptar = document.querySelector('.encriptar')
+          console.log(botonEncriptar);
+          var contenedorIzquierdo = document.querySelector('#contenedorIzquierdo')
+          console.log(contenedorIzquierdo);
+          var textarea = document.querySelector('textarea')
+          console.log(textarea.value);
+
+          function saludar (e){
+               if(e.target.value == "" || e.target.value == "off"){
+                    e.target.value = "on"
+               }else if(e.target.value == "on"){
+                    e.target.value = "off"
+               }
+               // console.log(e.target.value);
+               contenedorIzquierdo.hidden = true
+               // console.log(contenedorIzquierdo.hidden);
+               console.log(textarea.value);
+               let textoIngresado = textarea.value;
+               console.log(textoIngresado);
+               console.log(textoIngresado[1]);
+
+               recorrerString(textoIngresado)
+          }
+
+          function recorrerString (string){
+               for(let i = 0 ; i < string.length ; i++){
+                    console.log(string[i]);
+                    let palabraModificada = ""
+                    if(string[i] == "a"){
+                         palabraModificada = string.replaceAll('a',"ai")
+                         let paso1 = palabraModificada.replaceAll('e',"enter")
+                         let paso2 = palabraModificada.replaceAll('i',"imes")
+                         let paso3 = palabraModificada.replaceAll('o',"ober")
+                         let paso4 = palabraModificada.replaceAll('u',"ufat")
+                         console.log(`Encontré una a`);
+                         console.log(paso1);
+                    }
+               }
+          }
+
+
+          var a = "ai";
+          var e = "enter";
+          var i = "imes";
+          var o = "ober";
+          var u = "ufat";
+
+          function encriptar (){
+               
+          }
+
+          botonEncriptar.onclick = saludar;
+     </script>
 </body>
 </html>

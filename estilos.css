@@ -31,6 +31,13 @@ textarea{
      left: 130px;
      resize: none;
 }
+
+textarea::placeholder{
+     font-family: 'Inter', sans-serif;
+     font-size: 24px;
+     color: #0A3871;
+}
+
 #contenedorMensaje{
      position: relative;
      width: -moz-fit-content;
@@ -48,7 +55,7 @@ textarea{
      width: -moz-fit-content;
      width: fit-content;
      left: 130px;
-     margin-top: 30%;
+     margin-top: 25%;
 }
 
 .botones{
@@ -62,6 +69,13 @@ textarea{
      font-size: 16px;
      font-weight: 500;
      color: white;
+}
+
+.encriptar:hover{
+     background-color: white;
+     font-size: 16px;
+     font-weight: 500;
+     color: #6C63FF;
 }
 
 .desencriptar{
