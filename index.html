@@ -83,18 +83,22 @@
                for(let i = 0 ; i < string.length ; i++){
                     console.log("recorriendo letra:", string[i]);
                     if(string[i] == "a"){
-                         aux = string.replace(/a/g, "a" + "ai")
-                    }else if(string[i] == "e"){
-                         aux = aux.replaceAll('e',"enter")
-                         console.log("dentro if e");
-                    }else if(string[i] == "i"){
-                         aux = string.replace(/i/g, "i" + "imes")
-                    }else if(string[i] == "o"){
-                         aux = aux.replaceAll('o',"ober")
-                    }else if(string[i] == "u"){
-                         aux = aux.replaceAll('u',"ufat")
+                         console.log(string);
+                         console.log(string[i]);
+                         string[i].replace("ai")
+                         console.log("dentro a");
                     }
-                    console.log("valor de aux:" , aux);
+                    // else if(string[i] == "e"){
+                    //      aux = aux.replaceAll('e',"enter")
+                    //      console.log("dentro if e");
+                    // }else if(string[i] == "i"){
+                    //      aux = string.replace(/i/g, "i" + "imes")
+                    // }else if(string[i] == "o"){
+                    //      aux = aux.replaceAll('o',"ober")
+                    // }else if(string[i] == "u"){
+                    //      aux = aux.replaceAll('u',"ufat")
+                    // }
+                    console.log("valor de aux:" , string);
                }
                contenedorIzquierdoBeta.style = "visibility: visible";
                mensajeCopiado.style = "visibility: hidden";
