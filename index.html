@@ -54,21 +54,16 @@
      </footer>
 
      <script>
-          var botonEncriptar = document.querySelector('.encriptar')
-          console.log(botonEncriptar);
+
+          var btnEncriptar = document.querySelector('.encriptar')
+          var btnDesencriptar = document.querySelector('.desencriptar')
           var contenedorIzquierdo = document.querySelector('#contenedorIzquierdo')
-          console.log(contenedorIzquierdo);
           var textarea = document.querySelector('textarea')
-          console.log(textarea.value);
           var texto = document.querySelector('#textoEncriptado')
-          console.log(texto);
           var contenedorIzquierdoBeta = document.querySelector('#contenedorIzquierdoBeta')
-          console.log(contenedorIzquierdoBeta);
-          var botonCopiar = document.querySelector('.copiar')
-          console.log(botonCopiar);
-          var mensajeCopiado = document.querySelector('#mensajeCopiado')
-          console.log(mensajeCopiado);
-          
+          var btnCopiar = document.querySelector('.copiar')
+          var mensajeCopiado = document.querySelector('#mensajeCopiado')   
+          var textoCapturado = document.querySelector('#textoEncriptado')  
 
           function saludar (e){
                if(e.target.value == "" || e.target.value == "off"){
@@ -76,13 +71,8 @@
                }else if(e.target.value == "on"){
                     e.target.value = "off"
                }
-               // console.log(e.target.value);
                contenedorIzquierdo.hidden = true
-               // console.log(contenedorIzquierdo.hidden);
-               console.log(textarea.value);
                let textoIngresado = textarea.value.toLowerCase();
-               console.log(textoIngresado);
-               console.log(textoIngresado[1]);
 
                recorrerString(textoIngresado)
           }
@@ -106,24 +96,44 @@
           }
 
           function copiarTexto (e) {
-               let textoCapturado = document.querySelector('#textoEncriptado') 
-               console.log(textoCapturado.innerText); 
-               let textoCopiado = textoCapturado.innerText
+               var textoCopiado = textoCapturado.innerText
                navigator.clipboard.writeText(textoCopiado)
-               console.log(mensajeCopiado.hidden);
                mensajeCopiado.style = "visibility: visible";
-               setTimeout(mostrarMensaje, 5000)
+               setTimeout(mostrarMensaje, 500)
           }
           console.log([mensajeCopiado.hidden]);
           function mostrarMensaje(){
                if(mensajeCopiado.innerHTML === "Texto copiado!"){
-                    console.log("hola");
                     mensajeCopiado.style = "visibility: hidden"
                }
           }
 
-          botonEncriptar.onclick = saludar;
-          botonCopiar.onclick = copiarTexto;
+          function desencriptar (){
+               var textoEncriptado = textarea.value.toLowerCase();
+               desencriptarString(textoEncriptado)
+          }
+
+          function desencriptarString (string){
+               for(let i = 0 ; i < string.length ; i++){
+                    console.log(string[i]);
+
+                    if(string.includes("ai")){
+                         var paso0 = string.replaceAll("ai","a")
+                    //      var paso1 = paso0.replaceAll('e',"enter")
+                    //      var paso2 = paso1.replaceAll('i',"imes")
+                    //      var paso3 = paso2.replaceAll('o',"ober")
+                    //      var paso4 = paso3.replaceAll('u',"ufat")
+                         console.log(paso0);
+                    }
+               }
+               // contenedorIzquierdoBeta.style = "visibility: visible";
+               // mensajeCopiado.style = "visibility: hidden";
+               // texto.innerHTML = paso4
+          }
+
+          btnEncriptar.onclick = saludar;
+          btnDesencriptar.onclick = desencriptar;
+          btnCopiar.onclick = copiarTexto;
 
      </script>
 </body>
