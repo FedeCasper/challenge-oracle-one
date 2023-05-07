@@ -78,21 +78,27 @@
           }
 
           function recorrerString (string){
+               var aux = string
+               console.log(string);
                for(let i = 0 ; i < string.length ; i++){
-                    console.log(string[i]);
-
-                    if(string[i] == "a" || string[i] == "e" || string[i] == "i" || string[i] == "o" || string[i] == "u"){
-                         var paso0 = string.replaceAll('a',"ai")
-                         var paso1 = paso0.replaceAll('e',"enter")
-                         var paso2 = paso1.replaceAll('i',"imes")
-                         var paso3 = paso2.replaceAll('o',"ober")
-                         var paso4 = paso3.replaceAll('u',"ufat")
-                         console.log(paso4);
+                    console.log("recorriendo letra:", string[i]);
+                    if(string[i] == "a"){
+                         aux = string.replace(/a/g, "a" + "ai")
+                    }else if(string[i] == "e"){
+                         aux = aux.replaceAll('e',"enter")
+                         console.log("dentro if e");
+                    }else if(string[i] == "i"){
+                         aux = string.replace(/i/g, "i" + "imes")
+                    }else if(string[i] == "o"){
+                         aux = aux.replaceAll('o',"ober")
+                    }else if(string[i] == "u"){
+                         aux = aux.replaceAll('u',"ufat")
                     }
+                    console.log("valor de aux:" , aux);
                }
                contenedorIzquierdoBeta.style = "visibility: visible";
                mensajeCopiado.style = "visibility: hidden";
-               texto.innerHTML = paso4
+               // texto.innerHTML = paso4
           }
 
           function copiarTexto (e) {
