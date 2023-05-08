@@ -38,7 +38,7 @@
           </div>
 
           <div id="contenedorIzquierdoBeta">
-               <h2>Tu texto encriptado es el siguiente</h2>
+               <h2 id="h2Desencriptado">Tu texto encriptado es el siguiente</h2>
                <p id="textoEncriptado">Ingresa el texto que desees encriptar o desencriptar</p>
                <img id="imgContenedorIzquierdoBeta" src="./assets/happy.svg" alt="" srcset="">
                <button class="botones copiar">Copiar</button>
@@ -66,6 +66,8 @@
           var btnCopiar = document.querySelector('.copiar')
           var mensajeCopiado = document.querySelector('#mensajeCopiado')   
           var textoCapturado = document.querySelector('#textoEncriptado')  
+          var h2Desencriptado = document.querySelector('#h2Desencriptado')  
+          
 
           function saludar (e){
                if(e.target.value == "" || e.target.value == "off"){
@@ -110,7 +112,7 @@
                mensajeCopiado.style = "visibility: visible";
                setTimeout(mostrarMensaje, 500)
           }
-          console.log([mensajeCopiado.hidden]);
+
           function mostrarMensaje(){
                if(mensajeCopiado.innerHTML === "Texto copiado!"){
                     mensajeCopiado.style = "visibility: hidden"
@@ -123,21 +125,16 @@
           }
 
           function desencriptarString (string){
-               for(let i = 0 ; i < string.length ; i++){
-                    console.log(string[i]);
-
-                    if(string.includes("ai")){
-                         var paso0 = string.replaceAll("ai","a")
-                    //      var paso1 = paso0.replaceAll('e',"enter")
-                    //      var paso2 = paso1.replaceAll('i',"imes")
-                    //      var paso3 = paso2.replaceAll('o',"ober")
-                    //      var paso4 = paso3.replaceAll('u',"ufat")
-                         console.log(paso0);
+                    if(string.includes("ai", "enter", "imes", "ober", "ufat")){
+                         var a = string.replaceAll("ai","a")
+                         var e = a.replaceAll("enter","e")
+                         var i = e.replaceAll("imes","i")
+                         var o = i.replaceAll("ober","o")
+                         var u = o.replaceAll("ufat","u")
+                         console.log(u);
                     }
-               }
-               // contenedorIzquierdoBeta.style = "visibility: visible";
-               // mensajeCopiado.style = "visibility: hidden";
-               // texto.innerHTML = paso4
+                    h2Desencriptado.innerHTML = "El texto desencriptado es"
+                    texto.innerHTML = u
           }
 
           btnEncriptar.onclick = saludar;
