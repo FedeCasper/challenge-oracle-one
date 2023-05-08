@@ -55,6 +55,8 @@
 
      <script>
 
+          console.log("Bien linkeado");
+
           var btnEncriptar = document.querySelector('.encriptar')
           var btnDesencriptar = document.querySelector('.desencriptar')
           var contenedorIzquierdo = document.querySelector('#contenedorIzquierdo')
@@ -78,31 +80,28 @@
           }
 
           function recorrerString (string){
-               var aux = string
+               var aux = ""
                console.log(string);
                for(let i = 0 ; i < string.length ; i++){
                     console.log("recorriendo letra:", string[i]);
                     if(string[i] == "a"){
-                         console.log(string);
-                         console.log(string[i]);
-                         string[i].replace("ai")
-                         console.log("dentro a");
+                         aux += "ai"
+                    }else if(string[i] == "e"){
+                         aux += "enter"
+                    }else if(string[i] == "i"){
+                         aux += "imes"
+                    }else if(string[i] == "o"){
+                         aux += "ober"
+                    }else if(string[i] == "u"){
+                         aux += "ufat"
+                    }else{
+                         aux += string[i]
                     }
-                    // else if(string[i] == "e"){
-                    //      aux = aux.replaceAll('e',"enter")
-                    //      console.log("dentro if e");
-                    // }else if(string[i] == "i"){
-                    //      aux = string.replace(/i/g, "i" + "imes")
-                    // }else if(string[i] == "o"){
-                    //      aux = aux.replaceAll('o',"ober")
-                    // }else if(string[i] == "u"){
-                    //      aux = aux.replaceAll('u',"ufat")
-                    // }
-                    console.log("valor de aux:" , string);
+                    console.log("valor de aux:" , aux);
                }
                contenedorIzquierdoBeta.style = "visibility: visible";
                mensajeCopiado.style = "visibility: hidden";
-               // texto.innerHTML = paso4
+               texto.innerHTML = aux
           }
 
           function copiarTexto (e) {
