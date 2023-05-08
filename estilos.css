@@ -17,7 +17,7 @@ main {
      min-height: 90vh;
 }
 
-.logoEncriptador {
+.logoSitio {
      width: 200px;
      position: relative;
      top: 30px;
@@ -103,7 +103,7 @@ textarea::placeholder {
      box-shadow: 5px 5px 8px rgb(56, 3, 113);
 }
 
-#contenedorIzquierdo {
+#contenedorDerechoSinTexto {
      background-color: whitesmoke;
      position: absolute;
      width: 395px;
@@ -115,7 +115,7 @@ textarea::placeholder {
      box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.08);
 }
 
-#contenedorIzquierdo>h2 {
+#contenedorDerechoSinTexto > h2 {
      text-align: center;
      width: 80%;
      margin-top: 30px;
@@ -127,7 +127,7 @@ textarea::placeholder {
      color: #6C63FF;
 }
 
-#contenedorIzquierdo>p {
+#contenedorDerechoSinTexto > p {
      text-align: center;
      width: 80%;
      margin-left: auto;
@@ -135,14 +135,14 @@ textarea::placeholder {
      font-style: italic;
 }
 
-#imgContenedorIzquierdo {
+#imgContenedorDerechoSinTexto {
      display: block;
      width: 80%;
      margin-left: auto;
      margin-right: auto;
 }
 
-#contenedorIzquierdoBeta {
+#contenedorDerechoResultado {
      background-color: whitesmoke;
      position: absolute;
      width: 395px;
@@ -154,7 +154,7 @@ textarea::placeholder {
      visibility: hidden;
 }
 
-#contenedorIzquierdoBeta>h2 {
+#contenedorDerechoResultado > h2 {
      text-align: center;
      width: 80%;
      margin-left: auto;
@@ -165,7 +165,7 @@ textarea::placeholder {
      color: #6C63FF;
 }
 
-#contenedorIzquierdoBeta>p {
+#contenedorDerechoResultado > p {
      text-align: center;
      width: 80%;
      margin-left: auto;
@@ -173,7 +173,7 @@ textarea::placeholder {
      font-style: italic;
 }
 
-#imgContenedorIzquierdoBeta {
+#imgContenedorDerechoResultado {
      display: block;
      height: 300px;
      margin-top: 30px;
@@ -200,7 +200,7 @@ textarea::placeholder {
      box-shadow: 5px 5px 8px rgb(56, 3, 113);
 }
 
-#mensajeCopiado {
+#mensajeTextoCopiado {
      color: #FF6584;
      margin-top: 20px;
      font-weight: bold;

@@ -14,11 +14,10 @@
      <main id="contenedorPrincipal">
 
           <h1>
-               <img class="logoEncriptador" src="./assets/logo.svg" alt="logo encriptador">
+               <img class="logoSitio" src="./assets/logo.svg" alt="logo encriptador">
           </h1>
 
-          <textarea name="" id="" cols="30" rows="15" placeholder="Ingrese el texto aquí"></textarea>
-
+          <textarea cols="30" rows="15" placeholder="Ingrese el texto aquí"></textarea>
 
           <div class="contenedorBotones">
                <div id="contenedorMensaje">
@@ -31,21 +30,19 @@
                <button class="botones desencriptar">Desencriptar</button>
           </div>
 
-          <div id="contenedorIzquierdo">
-               <img id="imgContenedorIzquierdo" src="./assets/not_found.svg" alt="" srcset="">
+          <div id="contenedorDerechoSinTexto">
+               <img id="imgContenedorDerechoSinTexto" src="./assets/not_found.svg" alt="" srcset="">
                <h2>Ningún mensaje fue encontrado</h2>
                <p>Ingresa el texto que desees encriptar o desencriptar</p>
           </div>
 
-          <div id="contenedorIzquierdoBeta">
-               <h2 id="h2Desencriptado">Tu texto encriptado es el siguiente</h2>
-               <p id="textoEncriptado">Ingresa el texto que desees encriptar o desencriptar</p>
-               <img id="imgContenedorIzquierdoBeta" src="./assets/happy.svg" alt="" srcset="">
+          <div id="contenedorDerechoResultado">
+               <h2 id="tituloResultadoH2">Tu texto encriptado es el siguiente</h2>
+               <p id="resultadoTexto">Ingresa el texto que desees encriptar o desencriptar</p>
+               <img id="imgContenedorDerechoResultado" src="./assets/happy.svg" alt="" srcset="">
                <button class="botones copiar">Copiar</button>
-               <p id="mensajeCopiado">Texto copiado!</p>
+               <p id="mensajeTextoCopiado">Texto copiado!</p>
           </div>
-
-
 
      </main>
 
@@ -59,63 +56,53 @@
 
           var btnEncriptar = document.querySelector('.encriptar')
           var btnDesencriptar = document.querySelector('.desencriptar')
-          var contenedorIzquierdo = document.querySelector('#contenedorIzquierdo')
-          var textarea = document.querySelector('textarea')
-          var texto = document.querySelector('#textoEncriptado')
-          var contenedorIzquierdoBeta = document.querySelector('#contenedorIzquierdoBeta')
           var btnCopiar = document.querySelector('.copiar')
-          var mensajeCopiado = document.querySelector('#mensajeCopiado')   
-          var textoCapturado = document.querySelector('#textoEncriptado')  
-          var h2Desencriptado = document.querySelector('#h2Desencriptado')  
-          
 
-          function saludar (e){
-               if(e.target.value == "" || e.target.value == "off"){
-                    e.target.value = "on"
-               }else if(e.target.value == "on"){
-                    e.target.value = "off"
-               }
-               contenedorIzquierdo.hidden = true
-               let textoIngresado = textarea.value.toLowerCase();
+          var textarea = document.querySelector('textarea')
+          var contenedorDerechoSinTexto = document.querySelector('#contenedorDerechoSinTexto')
+          var contenedorDerechoResultado = document.querySelector('#contenedorDerechoResultado')
+          var resultadoTexto = document.querySelector('#resultadoTexto')
+          var tituloResultadoH2 = document.querySelector('#tituloResultadoH2')  
+          var mensajeTextoCopiado = document.querySelector('#mensajeTextoCopiado')   
 
-               recorrerString(textoIngresado)
-          }
-
-          function recorrerString (string){
+          function encriptaTexto (){
+               var textoIngresado = textarea.value.toLowerCase();
                var aux = ""
-               console.log(string);
-               for(let i = 0 ; i < string.length ; i++){
-                    console.log("recorriendo letra:", string[i]);
-                    if(string[i] == "a"){
+               if(textoIngresado == ""){
+                    alert("No ha ingresado ningún texto para encriptar ❌")
+               }
+               for(var i = 0 ; i < textoIngresado.length ; i++){
+                    console.log("recorriendo letra:", textoIngresado[i]);
+                    if(textoIngresado[i] == "a"){
                          aux += "ai"
-                    }else if(string[i] == "e"){
+                    }else if(textoIngresado[i] == "e"){
                          aux += "enter"
-                    }else if(string[i] == "i"){
+                    }else if(textoIngresado[i] == "i"){
                          aux += "imes"
-                    }else if(string[i] == "o"){
+                    }else if(textoIngresado[i] == "o"){
                          aux += "ober"
-                    }else if(string[i] == "u"){
+                    }else if(textoIngresado[i] == "u"){
                          aux += "ufat"
                     }else{
-                         aux += string[i]
+                         aux += textoIngresado[i]
                     }
                     console.log("valor de aux:" , aux);
                }
-               contenedorIzquierdoBeta.style = "visibility: visible";
-               mensajeCopiado.style = "visibility: hidden";
-               texto.innerHTML = aux
+               contenedorDerechoSinTexto.hidden = true
+               contenedorDerechoResultado.style = "visibility: visible";
+               mensajeTextoCopiado.style = "visibility: hidden";
+               resultadoTexto.innerHTML = aux
           }
 
           function copiarTexto (e) {
-               var textoCopiado = textoCapturado.innerText
-               navigator.clipboard.writeText(textoCopiado)
-               mensajeCopiado.style = "visibility: visible";
+               navigator.clipboard.writeText(resultadoTexto.innerText)
+               mensajeTextoCopiado.style = "visibility: visible";
                setTimeout(mostrarMensaje, 500)
           }
 
           function mostrarMensaje(){
-               if(mensajeCopiado.innerHTML === "Texto copiado!"){
-                    mensajeCopiado.style = "visibility: hidden"
+               if(mensajeTextoCopiado.innerHTML === "Texto copiado!"){
+                    mensajeTextoCopiado.style = "visibility: hidden"
                }
           }
 
@@ -133,12 +120,12 @@
                          var u = o.replaceAll("ufat","u")
                          console.log(u);
                     }
-                    h2Desencriptado.innerHTML = "El texto desencriptado es"
-                    texto.innerHTML = u
-                    imgContenedorIzquierdoBeta.setAttribute("src", "./assets/ok.svg")
+                    tituloResultadoH2.innerHTML = "El texto desencriptado es"
+                    resultadoTexto.innerHTML = u
+                    imgContenedorDerechoResultado.setAttribute("src", "./assets/ok.svg")
           }
 
-          btnEncriptar.onclick = saludar;
+          btnEncriptar.onclick = encriptaTexto;
           btnDesencriptar.onclick = desencriptar;
           btnCopiar.onclick = copiarTexto;
 
