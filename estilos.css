@@ -212,9 +212,23 @@ footer {
      height: 10vh;
 }
 
-@media (min-width: 375px) and (max-width: 768px){
+footer > p{
+     width: -moz-fit-content;
+     width: fit-content;
+     margin-left: auto;
+     margin-right: auto;
+     padding-top: 40px;
+     color: whitesmoke;
+}
 
-     main{
+@media (min-width: 601px) and (max-width: 1228px){
+
+     textarea{
+          background-color: aquamarine;
+     }
+
+     body{
+          min-height: 90vh;
           width: 100%;
      }
 
@@ -235,24 +249,24 @@ footer {
           position: relative;
           width: 90%;
           left: 0px;
-          top: 250px;
+          top: 150px;
           margin-top: 0;
           margin-left: auto;
           margin-right: auto;
      }
 
      .botones {
-          width: 45%;
+          width: 49%;
           height: 67px;
           border-radius: 24px;
      }
 
 #contenedorDerechoSinTexto {
      width: 90%;
-     margin-left: auto;
-     margin-right: auto;
+     position: relative;
      height: 200px;
-     top: 750px;
+     left: 30px;
+     top: 300px;
      padding-top: 30px;
      padding-bottom: 30px;
 }
@@ -263,7 +277,7 @@ footer {
 
 #contenedorDerechoResultado {
      width: 90%;
-     height: 200px;
+     height: 220px;
      top: 750px;
      right: 30px;
      padding-top: 30px;
@@ -277,6 +291,90 @@ footer {
 
 .copiar {
      margin-top: 10px;
+}
+
+}
+
+@media (min-width: 375px) and (max-width: 600px){
+textarea{
+     background-color: #FF6584;
+}
+
+
+body{
+     min-height: 90vh;
+     width: 100%;
+}
+
+textarea {
+     width: 90%;
+     position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     top: 100px;
+     left: 20px;
+     resize: none;
+     padding: 1rem;
+     font-size: 12px;
+     
+}
+
+.contenedorBotones {
+     position: relative;
+     width: 90%;
+     left: 0px;
+     top: 150px;
+     margin-top: 0;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.botones {
+     width: 100%;
+     margin-bottom: 20px;
+     height: 67px;
+     border-radius: 24px;
+}
+
+#contenedorDerechoSinTexto {
+width: 90%;
+position: relative;
+height: 200px;
+left: 20px;
+top: 250px;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+#imgContenedorDerechoSinTexto {
+display: none;
+}
+
+#contenedorDerechoResultado {
+width: 90%;
+height: 220px;
+top: 750px;
+right: 30px;
+padding-top: 30px;
+padding-bottom: 30px;
+visibility: hidden;
+}
+
+#imgContenedorDerechoResultado {
+display: none;
+}
+
+.copiar {
+margin-top: 10px;
+}
+
+footer > p{
+     text-align: center;
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+     padding-top: 40px;
+     color: whitesmoke;
 }
 
 }
