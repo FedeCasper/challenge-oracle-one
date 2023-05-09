@@ -50,15 +50,15 @@
           <p>Desarrollado por Federico Rouyere - Mendoza, Argentina.</p>
      </footer>
 
+     <!-- Comienzo del código JS -->
      <script>
-
-          console.log("Bien linkeado");
 
           var btnEncriptar = document.querySelector('.encriptar')
           var btnDesencriptar = document.querySelector('.desencriptar')
           var btnCopiar = document.querySelector('.copiar')
 
           var textarea = document.querySelector('textarea')
+          window.onload = textarea.focus()
           var contenedorDerechoSinTexto = document.querySelector('#contenedorDerechoSinTexto')
           var contenedorDerechoResultado = document.querySelector('#contenedorDerechoResultado')
           var resultadoTexto = document.querySelector('#resultadoTexto')
@@ -112,17 +112,17 @@
           }
 
           function desencriptarString (string){
-                    if(string.includes("ai", "enter", "imes", "ober", "ufat")){
-                         var a = string.replaceAll("ai","a")
-                         var e = a.replaceAll("enter","e")
-                         var i = e.replaceAll("imes","i")
-                         var o = i.replaceAll("ober","o")
-                         var u = o.replaceAll("ufat","u")
-                         console.log(u);
-                    }
-                    tituloResultadoH2.innerHTML = "El texto desencriptado es"
-                    resultadoTexto.innerHTML = u
-                    imgContenedorDerechoResultado.setAttribute("src", "./assets/ok.svg")
+               if(string.includes("ai", "enter", "imes", "ober", "ufat")){
+                    var letraReemplazadaA = string.replaceAll("ai","a")
+                    var letraReemplazadaE = letraReemplazadaA.replaceAll("enter","e")
+                    var letraReemplazadaI = letraReemplazadaE.replaceAll("imes","i")
+                    var letraReemplazadaO = letraReemplazadaI.replaceAll("ober","o")
+                    var letraReemplazadaU = letraReemplazadaO.replaceAll("ufat","u")
+                    console.log(letraReemplazadaU);
+               }
+               tituloResultadoH2.innerHTML = "El texto desencriptado es"
+               resultadoTexto.innerHTML = u
+               imgContenedorDerechoResultado.setAttribute("src", "./assets/ok.svg")
           }
 
           btnEncriptar.onclick = encriptaTexto;
