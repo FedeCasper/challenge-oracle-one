@@ -115,7 +115,7 @@ textarea::placeholder {
      box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.08);
 }
 
-#contenedorDerechoSinTexto > h2 {
+#contenedorDerechoSinTexto>h2 {
      text-align: center;
      width: 80%;
      margin-top: 30px;
@@ -127,7 +127,7 @@ textarea::placeholder {
      color: #6C63FF;
 }
 
-#contenedorDerechoSinTexto > p {
+#contenedorDerechoSinTexto>p {
      text-align: center;
      width: 80%;
      margin-left: auto;
@@ -154,7 +154,7 @@ textarea::placeholder {
      visibility: hidden;
 }
 
-#contenedorDerechoResultado > h2 {
+#contenedorDerechoResultado>h2 {
      text-align: center;
      width: 80%;
      margin-left: auto;
@@ -165,7 +165,7 @@ textarea::placeholder {
      color: #6C63FF;
 }
 
-#contenedorDerechoResultado > p {
+#contenedorDerechoResultado>p {
      text-align: center;
      width: 80%;
      margin-left: auto;
@@ -212,7 +212,7 @@ footer {
      height: 10vh;
 }
 
-footer > p{
+footer>p {
      width: -moz-fit-content;
      width: fit-content;
      margin-left: auto;
@@ -221,13 +221,9 @@ footer > p{
      color: whitesmoke;
 }
 
-@media (min-width: 601px) and (max-width: 1228px){
+@media (min-width: 601px) and (max-width: 1228px) {
 
-     textarea{
-          background-color: aquamarine;
-     }
-
-     body{
+     body {
           min-height: 90vh;
           width: 100%;
      }
@@ -242,7 +238,7 @@ footer > p{
           resize: none;
           padding: 1rem;
           font-size: 12px;
-          
+
      }
 
      .contenedorBotones {
@@ -261,120 +257,116 @@ footer > p{
           border-radius: 24px;
      }
 
-#contenedorDerechoSinTexto {
-     width: 90%;
-     position: relative;
-     height: 200px;
-     left: 30px;
-     top: 300px;
-     padding-top: 30px;
-     padding-bottom: 30px;
+     #contenedorDerechoSinTexto {
+          width: 90%;
+          position: relative;
+          height: 200px;
+          left: 30px;
+          top: 300px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+     }
+
+     #imgContenedorDerechoSinTexto {
+          display: none;
+     }
+
+     #contenedorDerechoResultado {
+          width: 90%;
+          height: 220px;
+          top: 750px;
+          right: 30px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          visibility: hidden;
+     }
+
+     #imgContenedorDerechoResultado {
+          display: none;
+     }
+
+     .copiar {
+          margin-top: 10px;
+     }
+
 }
 
-#imgContenedorDerechoSinTexto {
-     display: none;
-}
+@media (min-width: 375px) and (max-width: 600px) {
 
-#contenedorDerechoResultado {
-     width: 90%;
-     height: 220px;
-     top: 750px;
-     right: 30px;
-     padding-top: 30px;
-     padding-bottom: 30px;
-     visibility: hidden;
-}
+     body {
+          min-height: 90vh;
+          width: 100%;
+     }
 
-#imgContenedorDerechoResultado {
-     display: none;
-}
+     textarea {
+          width: 90%;
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+          top: 100px;
+          left: 20px;
+          resize: none;
+          padding: 1rem;
+          font-size: 12px;
 
-.copiar {
-     margin-top: 10px;
-}
+     }
 
-}
+     .contenedorBotones {
+          position: relative;
+          width: 90%;
+          left: 0px;
+          top: 150px;
+          margin-top: 0;
+          margin-left: auto;
+          margin-right: auto;
+     }
 
-@media (min-width: 375px) and (max-width: 600px){
-textarea{
-     background-color: #FF6584;
-}
+     .botones {
+          width: 100%;
+          margin-bottom: 20px;
+          height: 67px;
+          border-radius: 24px;
+     }
 
+     #contenedorDerechoSinTexto {
+          width: 90%;
+          position: relative;
+          height: 200px;
+          left: 20px;
+          top: 250px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+     }
 
-body{
-     min-height: 90vh;
-     width: 100%;
-}
+     #imgContenedorDerechoSinTexto {
+          display: none;
+     }
 
-textarea {
-     width: 90%;
-     position: relative;
-     margin-left: auto;
-     margin-right: auto;
-     top: 100px;
-     left: 20px;
-     resize: none;
-     padding: 1rem;
-     font-size: 12px;
-     
-}
+     #contenedorDerechoResultado {
+          width: 90%;
+          height: 220px;
+          top: 750px;
+          right: 30px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          visibility: hidden;
+     }
 
-.contenedorBotones {
-     position: relative;
-     width: 90%;
-     left: 0px;
-     top: 150px;
-     margin-top: 0;
-     margin-left: auto;
-     margin-right: auto;
-}
+     #imgContenedorDerechoResultado {
+          display: none;
+     }
 
-.botones {
-     width: 100%;
-     margin-bottom: 20px;
-     height: 67px;
-     border-radius: 24px;
-}
+     .copiar {
+          margin-top: 10px;
+     }
 
-#contenedorDerechoSinTexto {
-width: 90%;
-position: relative;
-height: 200px;
-left: 20px;
-top: 250px;
-padding-top: 30px;
-padding-bottom: 30px;
-}
-
-#imgContenedorDerechoSinTexto {
-display: none;
-}
-
-#contenedorDerechoResultado {
-width: 90%;
-height: 220px;
-top: 750px;
-right: 30px;
-padding-top: 30px;
-padding-bottom: 30px;
-visibility: hidden;
-}
-
-#imgContenedorDerechoResultado {
-display: none;
-}
-
-.copiar {
-margin-top: 10px;
-}
-
-footer > p{
-     text-align: center;
-     width: 90%;
-     margin-left: auto;
-     margin-right: auto;
-     padding-top: 40px;
-     color: whitesmoke;
-}
+     footer>p {
+          text-align: center;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 40px;
+          color: whitesmoke;
+     }
 
 }
