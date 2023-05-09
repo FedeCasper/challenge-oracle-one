@@ -214,29 +214,69 @@ footer {
 
 @media (min-width: 375px) and (max-width: 768px){
 
-textarea{
-     background-color: #FF6584;
-}
+     main{
+          width: 100%;
+     }
+
+     textarea {
+          width: 90%;
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+          top: 100px;
+          left: 35px;
+          resize: none;
+          padding: 1rem;
+          font-size: 12px;
+          
+     }
+
+     .contenedorBotones {
+          position: relative;
+          width: 90%;
+          left: 0px;
+          top: 250px;
+          margin-top: 0;
+          margin-left: auto;
+          margin-right: auto;
+     }
+
+     .botones {
+          width: 45%;
+          height: 67px;
+          border-radius: 24px;
+     }
 
 #contenedorDerechoSinTexto {
-     background-color: whitesmoke;
-     position: absolute;
      width: 90%;
      margin-left: auto;
      margin-right: auto;
      height: 200px;
      top: 750px;
-     padding-top: 50px;
-     padding-bottom: 50px;
-     border-radius: 24px;
-     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.08);
+     padding-top: 30px;
+     padding-bottom: 30px;
 }
 
 #imgContenedorDerechoSinTexto {
      display: none;
-     width: 80%;
-     margin-left: auto;
-     margin-right: auto;
+}
+
+#contenedorDerechoResultado {
+     width: 90%;
+     height: 200px;
+     top: 750px;
+     right: 30px;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     visibility: hidden;
+}
+
+#imgContenedorDerechoResultado {
+     display: none;
+}
+
+.copiar {
+     margin-top: 10px;
 }
 
 }
