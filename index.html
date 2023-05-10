@@ -108,6 +108,7 @@
 
           function desencriptar (){
                var textoEncriptado = textarea.value.toLowerCase();
+               console.log(textoEncriptado  == "");
                desencriptarString(textoEncriptado)
           }
 
@@ -119,6 +120,10 @@
                     var letraReemplazadaO = letraReemplazadaI.replaceAll("ober","o")
                     var letraReemplazadaU = letraReemplazadaO.replaceAll("ufat","u")
                     console.log(letraReemplazadaU);
+               }else if(string == ""){
+                    alert("No ha ingresado ningún mensaje ❌")
+               }else if(!string.includes("ai", "enter", "imes", "ober", "ufat")){
+                    alert("El mensaje no está encriptado ❌")
                }
                tituloResultadoH2.innerHTML = "El texto desencriptado es"
                resultadoTexto.innerHTML = letraReemplazadaU
