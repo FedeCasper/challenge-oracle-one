@@ -10,20 +10,35 @@
 <body>
      
      <main>
-          <section>
-               <div class="logo">LOGO</div>
-               <textarea placeholder="escriba"></textarea>
-               <div class="botones">
-                    <button>BTN1</button>
-                    <button>BTN2</button>
+          <!-- Contenedor del lado DERECHO de la pagina -->
+          <section id="sectionDerecho">
+               <!-- Espacio para el logo -->
+               <div class="logo">
+                    <img src="./assets/logo.svg" alt="logo encriptador">
+               </div>
+               <!-- Espacio para el textarea -->
+               <div class="textareaDiv">
+                    <textarea placeholder="escriba"></textarea>
+               </div>
+               <!-- Espacio para los botones -->
+               <div class="botonesDiv">
+                    <button class="botones">Encriptar</button>
+                    <button class="botones">Desencriptar</button>
                </div>
           </section>
-          <article>contenedor izquierdo
-               <div class="resultado">ACA RESULTADO</div>
+
+          <!-- Contenedor del lado IZQUIERDO de la pagina -->
+          <section id="sectionIzquierdo">
+               <div class="sectionIzquierdoDiv">
+                    <img src="./assets/not_found.svg" alt="persona">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    <button id="btnCopiar">Copiar</button>
+               </div>
           </section>
      </main>
      <footer>
-          SOY FOOTER
+          <p>Desarrollado por Federico Rouyere - Mendoza, Argentina.</p>
      </footer>
 
 </body>
