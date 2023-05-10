@@ -1,0 +1,88 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+main{
+     background-color: bisque;
+     height: 90vh;
+     padding: 1%;
+}
+section{
+     background-color: thistle;
+     height: 100%;
+     width: calc(50% - 1%);
+     float: left;
+}
+.logo{
+     background-color: rgb(162, 220, 201);
+     height: 10%;
+}
+textarea{
+     height: 80%;
+     width: 100%;
+}
+.botones{
+     background-color: greenyellow;
+     height: 8%;
+}
+button{
+     width: 50%;
+     float: left;
+}
+article{
+     background-color: darkolivegreen;
+     height: 100%;
+     width: calc(50% - 1%);
+     float: left;
+}
+.resultado{
+     background-color: aquamarine;
+     width: 80%;
+}
+footer{
+     background-color: darkseagreen;
+     min-height: 10vh;
+}
+
+@media screen and (max-width: 768px ) {
+     section{
+          background-color: thistle;
+          height: 70%;
+          width: 100%;
+     }
+     .logo{
+          background-color: rgb(162, 220, 201);
+          height: 10%;
+     }
+     textarea{
+          height: 80%;
+          width: 100%;
+     }
+     .botones{
+          background-color: greenyellow;
+          height: 8%;
+     }
+     button{
+          width: 50%;
+          float: left;
+     }
+     article{
+          background-color: darkolivegreen;
+          height: 30%;
+          width: 100%
+     }
+     footer{
+          background-color: rgb(208, 51, 208);
+          min-height: 10vh;
+     }
+}
+@media screen and (max-width: 375px ) {
+     button{
+          width: 100%;
+     }
+     footer{
+          background-color: rgb(81, 238, 13);
+          min-height: 10vh;
+     }
+}

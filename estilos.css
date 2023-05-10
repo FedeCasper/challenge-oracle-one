@@ -294,6 +294,11 @@ footer>p {
           width: 100%;
      }
 
+     main{
+          min-height: -moz-fit-content;
+          min-height: fit-content;
+     }
+
      textarea {
           width: 90%;
           position: relative;
@@ -339,6 +344,7 @@ footer>p {
      }
 
      #contenedorDerechoResultado {
+          position: relative;
           width: 90%;
           height: 220px;
           top: 750px;
