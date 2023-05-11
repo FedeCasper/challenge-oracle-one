@@ -163,7 +163,7 @@ footer > p {
 }
 @media screen and (max-width: 768px) {
      #sectionIzquierdo {
-          height: 70%;
+          height: 60%;
           width: 100%;
      }
 
@@ -172,8 +172,9 @@ footer > p {
      }
 
      .textareaDiv {
-          height: 80%;
+          height: 70%;
           width: 100%;
+          padding-top: 100px;
      }
      
      #btnCopiar{
@@ -213,6 +214,10 @@ footer > p {
 @media screen and (max-width: 375px) {
      .sectionDerechoDiv {
           min-width: auto;
+     }
+
+     .textareaDiv {
+          padding-top: 100px;
      }
 
      button {
