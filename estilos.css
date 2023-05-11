@@ -1,199 +1,138 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&display=swap');
 
-body {
-     background: #F3F5FC;
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
      font-family: 'Inter', sans-serif;
+}
+
+body{
+     background-image: url(./assets/background.png);
+     background-size: cover;
 }
 
 main {
-     background-color: white;
-     min-height: 90vh;
+     /* background-color: #ffe4c4; */
+     height: 90vh;
+     padding: 1%;
+}
+
+#sectionIzquierdo {
+     height: 100%;
+     width: calc(50% - 1%);
+     float: left;
+}
+
+.logo {
+     height: 10%;
+}
+
+.logo > img{
+     height: 100%;
+}
+
+.textareaDiv {
+     height: 75%;
      width: 100%;
+     padding-top: 200px;
 }
 
-.logoSitio {
-     width: 200px;
-     position: relative;
-     top: 30px;
-     left: 30px;
-}
-
-textarea {
-     width: 600px;
-     position: relative;
-     top: 100px;
-     left: 130px;
-     resize: none;
-     background-color: whitesmoke;
+.textareaDiv > textarea{
+     display: block;
+     height: 40%;
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 10px;
      border: none;
-     padding: 1rem;
-     font-family: 'Inter', sans-serif;
-     font-size: 12px;
-     color: #0A3871;
+     resize: none;
+     background-color:seashell;
+     border-radius: 12px;
+     box-shadow: 5px 5px 5px rgba(1, 1, 0, 0.197);
 }
 
 textarea::placeholder {
-     font-family: 'Inter', sans-serif;
-     font-size: 18px;
-     color: #0A3871;
+     font-size: 16px;
 }
 
-#contenedorMensaje {
-     position: relative;
-     width: -moz-fit-content;
-     width: fit-content;
-     margin-bottom: 5px;
+textarea:focus{
+     outline-color: #6C63FF;
 }
 
-#contenedorMensaje>svg {
-     display: inline-block;
+.botonesDiv {
+     height: 8%;
 }
 
-#contenedorMensaje>p {
-     display: inline-block;
-}
-
-.contenedorBotones {
-     position: relative;
-     width: -moz-fit-content;
-     width: fit-content;
-     left: 130px;
-     top: 300px;
-}
-
-.botones {
-     width: 300px;
+.botones{
+     width: 50%;
      height: 67px;
-     border-radius: 24px;
+     float: left;
+     border-radius: 16px;
+     transition: all 0.5s ease-in-out;
 }
 
-.encriptar {
-     background-color: #6C63FF;
-     font-size: 16px;
-     font-weight: 500;
+.botones:hover{
      color: white;
-     transition: all 0.2s ease-out;
-}
-
-.encriptar:hover {
-     background-color: white;
-     font-size: 16px;
-     color: #6C63FF;
-     box-shadow: 5px 5px 8px rgb(56, 3, 113);
-}
-
-.desencriptar {
-     background-color: #D8DFE8;
-     font-size: 16px;
-     font-weight: 500;
-     color: #3F3D56;
-     transition: all 0.2s ease-out;
-}
-
-.desencriptar:hover {
      background-color: #6C63FF;
-     font-size: 16px;
-     color: white;
-     box-shadow: 5px 5px 8px rgb(56, 3, 113);
 }
 
-#contenedorDerechoSinTexto {
-     background-color: rgb(245, 245, 245);
+#btnCopiar{
+     display: block;
+     width: 70%;
+     height: 67px;
+     margin: 30px auto 0 auto;
+     border-radius: 16px;
+     transition: all 0.5s ease-in-out;
+}
+
+#btnCopiar:hover{
+     color:white;
+     background-color: #FF6584;
+}
+
+#sectionDerecho {
+     position: relative;
+     height: 100%;
+     width: calc(50% - 1%);
+     float: left;
+}
+
+.sectionDerechoDiv {
      position: absolute;
-     height: 50%;
-     width: 395px;
-     top: 50px;
-     right: 50px;
+     background-color:#fff5ee;
+     min-width: 350px;
+     width: 60%;
+     height: 90%;
+     top:0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
      padding-top: 100px;
-     padding-bottom: 100px;
-     border-radius: 24px;
-     box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.29);
+     border-radius: 16px;
+     box-shadow: 5px 5px 5px rgba(1, 1, 0, 0.197);
 }
 
-#contenedorDerechoSinTexto>h2 {
-     text-align: center;
-     width: 80%;
-     margin-top: 30px;
+.sectionDerechoDiv > img{
+     display: block;
+     height: 40%;
      margin-left: auto;
      margin-right: auto;
-     font-weight: bold;
-     margin-bottom: 20px;
-     font-size: large;
+}
+
+.sectionDerechoDiv > h2{
+     width: 90%;
+     margin: 50px auto 20px auto;
      color: #6C63FF;
-}
-
-#contenedorDerechoSinTexto>p {
      text-align: center;
-     width: 80%;
+}
+
+.sectionDerechoDiv > p{
+     width: 90%;
      margin-left: auto;
      margin-right: auto;
-     font-style: italic;
-}
-
-#imgContenedorDerechoSinTexto {
-     display: block;
-     width: 80%;
-     margin-left: auto;
-     margin-right: auto;
-}
-
-#contenedorDerechoResultado {
-     background-color: whitesmoke;
-     position: absolute;
-     height: 50%;
-     width: 395px;
-     top: 30px;
-     right: 30px;
-     padding-top: 100px;
-     padding-bottom: 100px;
-     border-radius: 24px;
-     visibility: hidden;
-}
-
-#contenedorDerechoResultado>h2 {
      text-align: center;
-     width: 80%;
-     margin-left: auto;
-     margin-right: auto;
-     font-weight: bold;
-     margin-bottom: 20px;
-     font-size: large;
-     color: #6C63FF;
-}
-
-#contenedorDerechoResultado>p {
-     text-align: center;
-     width: 80%;
-     margin-left: auto;
-     margin-right: auto;
-     font-style: italic;
-}
-
-#imgContenedorDerechoResultado {
-     display: block;
-     height: 300px;
-     margin-top: 30px;
-     margin-left: auto;
-     margin-right: auto;
-}
-
-.copiar {
-     display: block;
-     background-color: #D8DFE8;
-     font-size: 16px;
-     font-weight: 500;
-     color: #3F3D56;
-     margin-left: auto;
-     margin-right: auto;
-     margin-top: 30px;
-     transition: all 0.2s ease-out;
-}
-
-.copiar:hover {
-     background-color: #6C63FF;
-     font-size: 16px;
-     color: white;
-     box-shadow: 5px 5px 8px rgb(56, 3, 113);
 }
 
 #mensajeTextoCopiado {
@@ -204,171 +143,83 @@ textarea::placeholder {
 }
 
 footer {
+     position: relative;
      background: #3F3D56;
-     height: 10vh;
+     min-height: 10vh;
 }
 
-footer>p {
+footer > p {
+     position: absolute;
+     height: max-content;
      width: -moz-fit-content;
      width: fit-content;
-     margin-left: auto;
-     margin-right: auto;
-     padding-top: 40px;
-     color: whitesmoke;
+     top:0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     color: white;
+     text-align: center;
+}
+@media screen and (max-width: 768px) {
+     #sectionIzquierdo {
+          height: 70%;
+          width: 100%;
+     }
+
+     .logo {
+          height: 10%;
+     }
+
+     .textareaDiv {
+          height: 80%;
+          width: 100%;
+     }
+     
+     #btnCopiar{
+          display: block;
+          width: 70%;
+          height: 67px;
+          margin: 30px auto 0 auto;
+          border-radius: 16px;
+     }
+
+     #sectionDerecho {
+          height: 30%;
+          width: 100%
+     }
+
+     .sectionDerechoDiv {
+          min-width: auto;
+          width: 90%;
+          height: 90%;
+          padding-top: 20px;
+     }
+
+     .sectionDerechoDiv > img{
+          display: none;
+     }
+
+     .sectionDerechoDiv > h2{
+          margin: 20px auto 20px auto;
+     }
+
+     footer {
+          background-color: rgb(208, 51, 208);
+          min-height: 10vh;
+     }
 }
 
-@media (min-width: 601px) and (max-width: 1228px) {
+@media screen and (max-width: 375px) {
+     .sectionDerechoDiv {
+          min-width: auto;
+     }
 
-     body {
-          min-height: 90vh;
+     button {
           width: 100%;
      }
 
-     textarea {
-          width: 90%;
-          position: relative;
-          margin-left: auto;
-          margin-right: auto;
-          top: 100px;
-          left: 35px;
-          resize: none;
-          padding: 1rem;
-          font-size: 12px;
-
+     footer {
+          min-height: 10vh;
      }
-
-     .contenedorBotones {
-          position: relative;
-          width: 90%;
-          left: 0px;
-          top: 150px;
-          margin-top: 0;
-          margin-left: auto;
-          margin-right: auto;
-     }
-
-     .botones {
-          width: 49%;
-          height: 67px;
-          border-radius: 24px;
-     }
-
-     #contenedorDerechoSinTexto {
-          width: 90%;
-          position: relative;
-          height: 200px;
-          left: 30px;
-          top: 300px;
-          padding-top: 30px;
-          padding-bottom: 30px;
-     }
-
-     #imgContenedorDerechoSinTexto {
-          display: none;
-     }
-
-     #contenedorDerechoResultado {
-          width: 90%;
-          height: 220px;
-          top: 750px;
-          right: 30px;
-          padding-top: 30px;
-          padding-bottom: 30px;
-          visibility: hidden;
-     }
-
-     #imgContenedorDerechoResultado {
-          display: none;
-     }
-
-     .copiar {
-          margin-top: 10px;
-     }
-
-}
-
-@media (min-width: 375px) and (max-width: 600px) {
-
-     body {
-          min-height: 90vh;
-          width: 100%;
-     }
-
-     main{
-          min-height: -moz-fit-content;
-          min-height: fit-content;
-     }
-
-     textarea {
-          width: 90%;
-          position: relative;
-          margin-left: auto;
-          margin-right: auto;
-          top: 100px;
-          left: 20px;
-          resize: none;
-          padding: 1rem;
-          font-size: 12px;
-
-     }
-
-     .contenedorBotones {
-          position: relative;
-          width: 90%;
-          left: 0px;
-          top: 150px;
-          margin-top: 0;
-          margin-left: auto;
-          margin-right: auto;
-     }
-
-     .botones {
-          width: 100%;
-          margin-bottom: 20px;
-          height: 67px;
-          border-radius: 24px;
-     }
-
-     #contenedorDerechoSinTexto {
-          width: 90%;
-          position: relative;
-          height: 200px;
-          left: 20px;
-          top: 250px;
-          padding-top: 30px;
-          padding-bottom: 30px;
-     }
-
-     #imgContenedorDerechoSinTexto {
-          display: none;
-     }
-
-     #contenedorDerechoResultado {
-          position: relative;
-          width: 90%;
-          height: 220px;
-          top: 750px;
-          right: 30px;
-          padding-top: 30px;
-          padding-bottom: 30px;
-          visibility: hidden;
-     }
-
-     #imgContenedorDerechoResultado {
-          display: none;
-     }
-
-     .copiar {
-          margin-top: 10px;
-     }
-
-     footer>p {
-          text-align: center;
-          width: 90%;
-          margin-left: auto;
-          margin-right: auto;
-          padding-top: 40px;
-          color: whitesmoke;
-     }
-
 }

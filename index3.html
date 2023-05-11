@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="shortcut icon" href="./assets/happy_bird.png" type="image/x-icon">
+     <link rel="stylesheet" href="reset.css">
+     <link rel="stylesheet" href="estilos.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Encriptador</title>
+</head>
+<body>
+
+     <main id="contenedorPrincipal">
+
+          <h1>
+               <img class="logoSitio" src="./assets/logo.svg" alt="logo encriptador">
+          </h1>
+
+          <textarea cols="30" rows="15" placeholder="Ingrese el texto aquí"></textarea>
+
+          <div class="contenedorBotones">
+               <div id="contenedorMensaje">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM8 4C7.87361 4.00007 7.74863 4.02662 7.63312 4.07793C7.51761 4.12924 7.41413 4.20418 7.32934 4.29791C7.24456 4.39165 7.18035 4.5021 7.14084 4.62217C7.10134 4.74223 7.08743 4.86923 7.1 4.995L7.45 8.502C7.46176 8.63977 7.5248 8.76811 7.62664 8.86164C7.72849 8.95516 7.86173 9.00705 8 9.00705C8.13827 9.00705 8.27151 8.95516 8.37336 8.86164C8.4752 8.76811 8.53824 8.63977 8.55 8.502L8.9 4.995C8.91257 4.86923 8.89866 4.74223 8.85915 4.62217C8.81965 4.5021 8.75544 4.39165 8.67066 4.29791C8.58587 4.20418 8.48239 4.12924 8.36688 4.07793C8.25137 4.02662 8.12639 4.00007 8 4ZM8.002 10C7.73678 10 7.48243 10.1054 7.29489 10.2929C7.10736 10.4804 7.002 10.7348 7.002 11C7.002 11.2652 7.10736 11.5196 7.29489 11.7071C7.48243 11.8946 7.73678 12 8.002 12C8.26722 12 8.52157 11.8946 8.70911 11.7071C8.89664 11.5196 9.002 11.2652 9.002 11C9.002 10.7348 8.89664 10.4804 8.70911 10.2929C8.52157 10.1054 8.26722 10 8.002 10Z" fill="#495057"/>
+                    </svg>
+                    <p>Sólo letras minúsculas sin acentos</p>
+               </div>
+               <button class="botones encriptar">Encriptar</button>
+               <button class="botones desencriptar">Desencriptar</button>
+          </div>
+
+          <div id="contenedorDerechoSinTexto">
+               <img id="imgContenedorDerechoSinTexto" src="./assets/not_found.svg" alt="" srcset="">
+               <h2>Ningún mensaje fue encontrado</h2>
+               <p>Ingresa el texto que desees encriptar o desencriptar</p>
+          </div>
+
+          <div id="contenedorDerechoResultado">
+               <h2 id="tituloResultadoH2">Tu texto encriptado es el siguiente</h2>
+               <p id="resultadoTexto">Ingresa el texto que desees encriptar o desencriptar</p>
+               <img id="imgContenedorDerechoResultado" src="./assets/happy.svg" alt="" srcset="">
+               <button class="botones copiar">Copiar</button>
+               <p id="mensajeTextoCopiado">Texto copiado!</p>
+          </div>
+
+     </main>
+
+     <footer>
+          <p>Desarrollado por Federico Rouyere - Mendoza, Argentina.</p>
+     </footer>
+
+     <!-- Comienzo del código JS -->
+     <script>
+
+          var btnEncriptar = document.querySelector('.encriptar')
+          var btnDesencriptar = document.querySelector('.desencriptar')
+          var btnCopiar = document.querySelector('.copiar')
+
+          var textarea = document.querySelector('textarea')
+          window.onload = textarea.focus()
+          var contenedorDerechoSinTexto = document.querySelector('#contenedorDerechoSinTexto')
+          var contenedorDerechoResultado = document.querySelector('#contenedorDerechoResultado')
+          var resultadoTexto = document.querySelector('#resultadoTexto')
+          var tituloResultadoH2 = document.querySelector('#tituloResultadoH2')  
+          var mensajeTextoCopiado = document.querySelector('#mensajeTextoCopiado')   
+
+          function encriptaTexto (){
+               var textoIngresado = textarea.value.toLowerCase();
+               var aux = ""
+               if(textoIngresado == ""){
+                    alert("No ha ingresado ningún texto para encriptar ❌")
+               }
+               for(var i = 0 ; i < textoIngresado.length ; i++){
+                    console.log("recorriendo letra:", textoIngresado[i]);
+                    if(textoIngresado[i] == "a"){
+                         aux += "ai"
+                    }else if(textoIngresado[i] == "e"){
+                         aux += "enter"
+                    }else if(textoIngresado[i] == "i"){
+                         aux += "imes"
+                    }else if(textoIngresado[i] == "o"){
+                         aux += "ober"
+                    }else if(textoIngresado[i] == "u"){
+                         aux += "ufat"
+                    }else{
+                         aux += textoIngresado[i]
+                    }
+                    console.log("valor de aux:" , aux);
+               }
+               contenedorDerechoSinTexto.hidden = true
+               contenedorDerechoResultado.style = "visibility: visible";
+               mensajeTextoCopiado.style = "visibility: hidden";
+               resultadoTexto.innerHTML = aux
+          }
+
+          function copiarTexto (e) {
+               navigator.clipboard.writeText(resultadoTexto.innerText)
+               mensajeTextoCopiado.style = "visibility: visible";
+               setTimeout(mostrarMensaje, 500)
+          }
+
+          function mostrarMensaje(){
+               if(mensajeTextoCopiado.innerHTML === "Texto copiado!"){
+                    mensajeTextoCopiado.style = "visibility: hidden"
+               }
+          }
+
+          function desencriptar (){
+               var textoEncriptado = textarea.value.toLowerCase();
+               console.log(textoEncriptado  == "");
+               desencriptarString(textoEncriptado)
+          }
+
+          function desencriptarString (string){
+               if(string.includes("ai", "enter", "imes", "ober", "ufat")){
+                    var letraReemplazadaA = string.replaceAll("ai","a")
+                    var letraReemplazadaE = letraReemplazadaA.replaceAll("enter","e")
+                    var letraReemplazadaI = letraReemplazadaE.replaceAll("imes","i")
+                    var letraReemplazadaO = letraReemplazadaI.replaceAll("ober","o")
+                    var letraReemplazadaU = letraReemplazadaO.replaceAll("ufat","u")
+                    console.log(letraReemplazadaU);
+               }else if(string == ""){
+                    alert("No ha ingresado ningún mensaje ❌")
+               }else if(!string.includes("ai", "enter", "imes", "ober", "ufat")){
+                    alert("El mensaje no está encriptado ❌")
+               }
+               tituloResultadoH2.innerHTML = "El texto desencriptado es"
+               resultadoTexto.innerHTML = letraReemplazadaU
+               imgContenedorDerechoResultado.setAttribute("src", "./assets/ok.svg")
+          }
+
+          btnEncriptar.onclick = encriptaTexto;
+          btnDesencriptar.onclick = desencriptar;
+          btnCopiar.onclick = copiarTexto;
+
+     </script>
+</body>
+</html>
