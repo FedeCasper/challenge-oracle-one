@@ -13,8 +13,7 @@ main {
      padding: 1%;
 }
 
-#sectionDerecho {
-     background-color: thistle;
+#sectionIzquierdo {
      height: 100%;
      width: calc(50% - 1%);
      float: left;
@@ -22,18 +21,15 @@ main {
 
 .logo {
      height: 10%;
-     background-color: rgb(162, 220, 201);
 }
 
 .logo > img{
      height: 100%;
-     background-color: blueviolet;
 }
 
 .textareaDiv {
-     height: 80%;
+     height: 75%;
      width: 100%;
-     background-color:lightcyan;
      padding-top: 200px;
 }
 
@@ -43,10 +39,19 @@ main {
      width: 90%;
      margin-left: auto;
      margin-right: auto;
+     padding: 10px;
+     border: none;
+     resize: none;
+     background-color:seashell;
+     border-radius: 12px;
+     box-shadow: 5px 5px 5px rgba(1, 1, 0, 0.148);
+}
+
+textarea::placeholder {
+     font-size: 16px;
 }
 
 .botonesDiv {
-     background-color: greenyellow;
      height: 8%;
 }
 
@@ -55,6 +60,12 @@ main {
      height: 67px;
      float: left;
      border-radius: 16px;
+     transition: all 0.5s ease-in-out;
+}
+
+.botones:hover{
+     color: white;
+     background-color: #6C63FF;
 }
 
 #btnCopiar{
@@ -63,19 +74,24 @@ main {
      height: 67px;
      margin: 30px auto 0 auto;
      border-radius: 16px;
+     transition: all 0.5s ease-in-out;
 }
 
-#sectionIzquierdo {
+#btnCopiar:hover{
+     color:white;
+     background-color: #FF6584;
+}
+
+#sectionDerecho {
      position: relative;
-     background-color: darkolivegreen;
      height: 100%;
      width: calc(50% - 1%);
      float: left;
 }
 
-.sectionIzquierdoDiv {
+.sectionDerechoDiv {
      position: absolute;
-     background-color: aquamarine;
+     background-color:seashell;
      min-width: 350px;
      width: 60%;
      height: 90%;
@@ -86,31 +102,40 @@ main {
      margin: auto;
      padding-top: 100px;
      border-radius: 16px;
+     box-shadow: 5px 5px 5px rgba(1, 1, 0, 0.148);
 }
 
-.sectionIzquierdoDiv > img{
+.sectionDerechoDiv > img{
      display: block;
      height: 40%;
      margin-left: auto;
      margin-right: auto;
 }
 
-.sectionIzquierdoDiv > h2{
+.sectionDerechoDiv > h2{
      width: 90%;
      margin: 50px auto 20px auto;
+     color: #6C63FF;
      text-align: center;
 }
 
-.sectionIzquierdoDiv > p{
+.sectionDerechoDiv > p{
      width: 90%;
      margin-left: auto;
      margin-right: auto;
      text-align: center;
 }
 
+#mensajeTextoCopiado {
+     color: #FF6584;
+     margin-top: 20px;
+     font-weight: bold;
+     transition: all 0.2s ease-out;
+}
+
 footer {
      position: relative;
-     background-color: darkseagreen;
+     background: #3F3D56;
      min-height: 10vh;
 }
 
@@ -124,17 +149,16 @@ footer > p {
      right: 0;
      bottom: 0;
      margin: auto;
+     color: white;
      text-align: center;
 }
 @media screen and (max-width: 768px) {
-     #sectionDerecho {
-          background-color: thistle;
+     #sectionIzquierdo {
           height: 70%;
           width: 100%;
      }
 
      .logo {
-          background-color: rgb(162, 220, 201);
           height: 10%;
      }
 
@@ -151,24 +175,23 @@ footer > p {
           border-radius: 16px;
      }
 
-     #sectionIzquierdo {
-          background-color: darkolivegreen;
+     #sectionDerecho {
           height: 30%;
           width: 100%
      }
 
-     .sectionIzquierdoDiv {
+     .sectionDerechoDiv {
           min-width: auto;
           width: 90%;
           height: 90%;
           padding-top: 20px;
      }
 
-     .sectionIzquierdoDiv > img{
+     .sectionDerechoDiv > img{
           display: none;
      }
 
-     .sectionIzquierdoDiv > h2{
+     .sectionDerechoDiv > h2{
           margin: 20px auto 20px auto;
      }
 
@@ -179,7 +202,7 @@ footer > p {
 }
 
 @media screen and (max-width: 375px) {
-     .sectionIzquierdoDiv {
+     .sectionDerechoDiv {
           min-width: auto;
      }
 
@@ -188,7 +211,6 @@ footer > p {
      }
 
      footer {
-          background-color: rgb(81, 238, 13);
           min-height: 10vh;
      }
 }

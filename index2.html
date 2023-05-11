@@ -11,29 +11,30 @@
      
      <main>
           <!-- Contenedor del lado DERECHO de la pagina -->
-          <section id="sectionDerecho">
+          <section id="sectionIzquierdo">
                <!-- Espacio para el logo -->
                <div class="logo">
                     <img src="./assets/logo.svg" alt="logo encriptador">
                </div>
                <!-- Espacio para el textarea -->
                <div class="textareaDiv">
-                    <textarea placeholder="escriba"></textarea>
+                    <textarea placeholder="Ingrese el texto que desea encriptar"></textarea>
                </div>
                <!-- Espacio para los botones -->
                <div class="botonesDiv">
-                    <button class="botones">Encriptar</button>
-                    <button class="botones">Desencriptar</button>
+                    <button class="botones encriptar">Encriptar</button>
+                    <button class="botones desencriptar">Desencriptar</button>
                </div>
           </section>
 
           <!-- Contenedor del lado IZQUIERDO de la pagina -->
-          <section id="sectionIzquierdo">
-               <div class="sectionIzquierdoDiv">
-                    <img src="./assets/not_found.svg" alt="persona">
+          <section id="sectionDerecho">
+               <div class="sectionDerechoDiv">
+                    <img src="./assets/not_found.svg" alt="persona al aldo del celular error">
                     <h2>Ningún mensaje fue encontrado</h2>
-                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    <p class="textoResultante">Ingresa el texto que desees encriptar o desencriptar</p>
                     <button id="btnCopiar">Copiar</button>
+                    <p id="mensajeTextoCopiado">Texto copiado!</p>
                </div>
           </section>
      </main>
@@ -41,5 +42,6 @@
           <p>Desarrollado por Federico Rouyere - Mendoza, Argentina.</p>
      </footer>
 
+     <script src="./main.js"></script>
 </body>
 </html>
