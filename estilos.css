@@ -163,7 +163,7 @@ footer > p {
 }
 @media screen and (max-width: 768px) {
      #sectionIzquierdo {
-          height: 60%;
+          height: 50%;
           width: 100%;
      }
 
@@ -172,11 +172,15 @@ footer > p {
      }
 
      .textareaDiv {
-          height: 70%;
+          height: 50%;
           width: 100%;
           padding-top: 100px;
      }
-     
+
+     .textareaDiv > textarea{
+          height: 60%;
+     }
+
      #btnCopiar{
           display: block;
           width: 70%;
@@ -186,7 +190,7 @@ footer > p {
      }
 
      #sectionDerecho {
-          height: 30%;
+          height: 40%;
           width: 100%
      }
 
@@ -206,7 +210,6 @@ footer > p {
      }
 
      footer {
-          background-color: rgb(208, 51, 208);
           min-height: 10vh;
      }
 }
@@ -217,10 +220,11 @@ footer > p {
      }
 
      .textareaDiv {
+          position: relative;
           padding-top: 100px;
      }
 
-     button {
+     .botones {
           width: 100%;
      }
 
