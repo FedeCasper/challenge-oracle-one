@@ -62,6 +62,11 @@ textarea:focus{
      outline-color: #6C63FF;
 }
 
+button[type="reset"]{
+     background-color: #FF6584;
+     float: right;
+} 
+
 .botonesDiv {
      width: 90%;
      height: 8%;
@@ -70,16 +75,21 @@ textarea:focus{
 }
 
 .botones{
-     width: 50%;
+     width: calc( 50% - 5px );
      height: 67px;
      float: left;
      border-radius: 16px;
-     transition: all 0.5s ease-in-out;
+     transition: all 0.3s ease-in-out;
+}
+
+.botones:nth-child(1){
+     margin-right: 10px;
 }
 
 .botones:hover{
      color: white;
      background-color: #6C63FF;
+     transform: scale(1.03);
 }
 
 #btnCopiar{
@@ -88,12 +98,15 @@ textarea:focus{
      height: 67px;
      margin: 30px auto 0 auto;
      border-radius: 16px;
-     transition: all 0.5s ease-in-out;
+     background-color: #FF6584;
+     color: white;
+     transition: all 0.3s ease-in-out;
 }
 
 #btnCopiar:hover{
      color:white;
-     background-color: #FF6584;
+     background-color: #6C63FF;
+     transform: scale(1.03);
 }
 
 #sectionDerecho {
@@ -165,6 +178,7 @@ footer > p {
      margin: auto;
      color: white;
      text-align: center;
+     font-family: 'Inter', sans-serif;
 }
 @media screen and (max-width: 768px) {
      #sectionIzquierdo {
@@ -173,7 +187,7 @@ footer > p {
      }
 
      .logo {
-          height: 10%;
+          height: 30%;
      }
 
      .textareaDiv {

@@ -39,7 +39,13 @@ function encriptaTexto (){
 }
 
 function copiarTexto (e) {
-     navigator.clipboard.writeText(pSectionDerecho.innerText)
+     var texto = pSectionDerecho.innerText
+     var textoInicial = "Ingresa el texto que desees encriptar o desencriptar"
+     console.log(texto);
+     if(texto == textoInicial){
+          alert('No hay ningún texto que copiar ❌')
+     }
+     navigator.clipboard.writeText(texto)
      mensajeTextoCopiado.style = "visibility: visible";
      setTimeout(mostrarMensaje, 500)
 }
