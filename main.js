@@ -88,13 +88,18 @@ function borrarTextarea (){
      textarea.value = ""
 }
 
-function pegarTexto (){
-          
+// function pegarTexto (){
+//      navigator.clipboard.writeText(pSectionDerecho.innerText)
+//      navigator.clipboard.readText()
+//      .then(response => {
+//           textarea.value = response
+//      })
+// }
+
+async function pegarTexto (){
      navigator.clipboard.writeText(pSectionDerecho.innerText)
-     navigator.clipboard.readText()
-     .then(response => {
-          textarea.value = response
-     })
+     let response = await navigator.clipboard.readText()
+     textarea.value = response
 }
 
 btnEncriptar.onclick = encriptaTexto;
