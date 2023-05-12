@@ -1,6 +1,10 @@
 var btnEncriptar = document.querySelector('.encriptar')
 var btnDesencriptar = document.querySelector('.desencriptar')
 var btnCopiar = document.querySelector('#btnCopiar')
+var btnReset = document.querySelector('#btnBorrar')
+console.log(btnReset);
+var btnPegar = document.querySelector('#btnPegar')
+console.log(btnPegar);
 var textarea = document.querySelector('textarea')
 window.onload = textarea.focus()
 var contenedorDerechoSinTexto = document.querySelector('#contenedorDerechoSinTexto')
@@ -80,6 +84,21 @@ function desencriptarString (string){
      pSectionDerecho.innerHTML = auxU
 }
 
+function borrarTextarea (){
+     textarea.value = ""
+}
+
+function pegarTexto (){
+          
+     navigator.clipboard.writeText(pSectionDerecho.innerText)
+     navigator.clipboard.readText()
+     .then(response => {
+          textarea.value = response
+     })
+}
+
 btnEncriptar.onclick = encriptaTexto;
 btnDesencriptar.onclick = desencriptar;
 btnCopiar.onclick = copiarTexto;
+btnReset.onclick = borrarTextarea;
+btnPegar.onclick = pegarTexto;

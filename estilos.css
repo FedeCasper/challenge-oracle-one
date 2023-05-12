@@ -62,9 +62,24 @@ textarea:focus{
      outline-color: #6C63FF;
 }
 
-button[type="reset"]{
-     background-color: #FF6584;
+#btnBorrar{
      float: right;
+     padding: 5px;
+     margin: 10px 50px 0 0;
+     border: none;
+     border-radius: 12px;
+} 
+
+#btnPegar{
+     float: right;
+     padding: 5px;
+     margin: 10px 10px 0 0;
+     border: none;
+     border-radius: 12px;
+}
+
+#btnBorrar:hover, #btnPegar:hover{
+     background-color: #FF6584;
 } 
 
 .botonesDiv {
@@ -193,7 +208,7 @@ footer > p {
      .textareaDiv {
           height: 50%;
           width: 100%;
-          padding-top: 100px;
+          padding-top: 50px;
      }
 
      .textareaDiv > textarea{
