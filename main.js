@@ -97,7 +97,7 @@ function borrarTextarea (){
 // }
 
 async function pegarTexto (){
-     navigator.clipboard.writeText(pSectionDerecho.innerText)
+     // navigator.clipboard.writeText(pSectionDerecho.innerText)
      let response = await navigator.clipboard.readText()
      textarea.value = response
 }

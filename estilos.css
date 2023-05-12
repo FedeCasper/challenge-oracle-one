@@ -249,13 +249,29 @@ footer > p {
 }
 
 @media screen and (max-width: 375px) {
+     .logo{
+          height: 20%;
+          padding-top: 20px;
+     }
+
+     .logo > img{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+     }
+
+     #sectionIzquierdo {
+          height: 60%;
+          width: 100%;
+     }
+
      .sectionDerechoDiv {
           min-width: auto;
      }
 
      .textareaDiv {
           position: relative;
-          padding-top: 100px;
+          padding-top: 50px;
      }
 
      .botones {
